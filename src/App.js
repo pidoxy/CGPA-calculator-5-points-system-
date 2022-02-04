@@ -18,7 +18,7 @@ function App() {
         <div className="flex md:flex-row text-sm flex-col md:space-x-2 space-y-2 my-3 text-black">
           
           <input
-            className="rounded-md border-2 border-gray-300 px-1 py-1"
+            className="rounded-md border-2 border-gray-300 px-2 py-1"
             value={courses.courseName}
             onChange={(e) =>
               setCourses({ ...courses, courseName: e.target.value })
@@ -27,7 +27,7 @@ function App() {
             placeholder=" enter your course title"
           />
           <input
-            className="rounded-md border-2 border-gray-300 px-1 py-1"
+            className="rounded-md border-2 border-gray-300 px-2 py-1"
             value={courses.courseCode}
             onChange={(e) =>
               setCourses({ ...courses, courseCode: e.target.value })
@@ -36,7 +36,7 @@ function App() {
             placeholder=" enter your course code"
           />
           <input
-            className="rounded-md border-2 border-gray-300 px-1 py-1"
+            className="rounded-md border-2 border-gray-300 px-2 py-1"
             value={courses.courseUnit}
             onChange={(e) =>
               setCourses({ ...courses, courseUnit: e.target.value })
@@ -45,7 +45,7 @@ function App() {
             placeholder=" enter your course unit"
           />
           <input
-            className="rounded-md border-2 border-gray-300 px-1 py-1"
+            className="rounded-md border-2 border-gray-300 px-2 py-1"
             value={courses.score}
             onChange={(e) => setCourses({ ...courses, score: e.target.value })}
             type="number"
@@ -62,16 +62,16 @@ function App() {
           Add Course
         </button>
         <div className="space-y-4">
-          <div className="relative rounded-xl overflow-x-auto ">
-            <div className="shadow-sm overflow-x-auto my-8">
-              <table className="border-collapse table-auto overflow-x-auto w-full text-xs md:text-sm">
+          <div className="relative rounded-xl ">
+            <div className="shadow-sm overflow-x-scroll my-8">
+              <table className="border-collapse table-fixed md:table-auto overflow-x-scroll w-full text-xs md:text-sm">
                 <thead>
                   <tr>
                     <th className="border-b dark:border-slate-600 font-medium p-1 md:p-4 pl-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">
-                      Course Title
+                      course Title
                     </th>
-                    <th className="border-b dark:border-slate-600 font-medium p-1 md:p-4 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">
-                      Course Code
+                    <th className="border-b dark:border-slate-600 font-medium p-1 md:p-4 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-right md:text-light">
+                      Code
                     </th>
                     <th className="border-b dark:border-slate-600 font-medium p-1 md:p-4 pr-8 pt-0 pb-3 text-slate-400 dark:text-slate-200 text-left">
                       Units
@@ -170,7 +170,7 @@ function App() {
                 </tbody>
               </table>
               <div>
-                <p>
+                <p className="pt-4">
                   CGPA :{" "}
                   {courses.score ? (data.reduce(
                     (a, item) =>
