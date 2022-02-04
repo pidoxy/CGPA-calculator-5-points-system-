@@ -141,7 +141,7 @@ function App() {
                     <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"></td>
                     <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">
                       {/* {(data.reduce((a, item) => a + item.courseUnit, 0) || 0).toFixed(2)} */}
-                      {(data.reduce((a, item) => a + item.courseUnit, 0) )}
+                      {data.reduce((a, item) => a + Number(item.courseUnit) , 0) }
                     </td>
                     <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400"></td>
                     <td className="border-b border-slate-100 dark:border-slate-700 p-4 pl-8 text-slate-500 dark:text-slate-400">
