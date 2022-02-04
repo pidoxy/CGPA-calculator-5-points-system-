@@ -10,8 +10,6 @@ function App() {
     grade: 0,
   });
   const [data, setData] = useState([]);
-  const [totalUnit, setTotalUnit] = useState(0);
-  const [totalCredit, setTotalCredit] = useState(0);
 
   return (
     <div className="App">
@@ -174,7 +172,7 @@ function App() {
               <div>
                 <p>
                   CGPA :{" "}
-                  {totalUnit ? (data.reduce(
+                  {courses.score ? (data.reduce(
                     (a, item) =>
                       a +
                       item.courseUnit *
