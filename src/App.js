@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>CGPA Calculator.</p>
-        <div className="flex md:flex-row text-sm flex-col md:space-x-2 space-y-2 my-3 text-black">
+        <div className="flex md:flex-row text-sm flex-col md:space-x-2 space-y-2 md:space-y-0 my-3 text-black">
           
           <input
             className="rounded-md border-2 border-gray-300 px-2 py-1"
